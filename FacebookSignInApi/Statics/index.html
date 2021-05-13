@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=1234567890&autoLogAppEvents=1" nonce="WSrc5Zps"></script>
+    <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-onlogin="onSignIn"></div>
+    <button onclick="signOut()">Sign Out</button>
+
+    <script>
+        function onSignIn(response) {
+
+            console.log(response);
+
+            fetch('https://localhost:5001/api/Access/signin-facebook', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(response.authResponse)
+            })
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error('Unable to proccess the request', error));
+        }
+
+        function signOut() {
+
+            FB.getLoginStatus(function (response) {
+                console.log(response);
+              
+                FB.logout(function () {
+
+                    fetch('https://localhost:5001/api/Access/signout-facebook', {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: null
+                    })
+                        .then(response => response.json())
+                        .then(data => console.log(data))
+                        .catch(error => console.error('Unable to proccess the request', error));
+
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>

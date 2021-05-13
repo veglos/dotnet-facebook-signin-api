@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookSignInApi", "FacebookSignInApi\FacebookSignInApi.csproj", "{A3E6C28F-AE72-42EE-BD13-4C726EC88A8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3E6C28F-AE72-42EE-BD13-4C726EC88A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3E6C28F-AE72-42EE-BD13-4C726EC88A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3E6C28F-AE72-42EE-BD13-4C726EC88A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3E6C28F-AE72-42EE-BD13-4C726EC88A8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B879B155-B9A2-4855-A381-D5BF5D29AC56}
+	EndGlobalSection
+EndGlobal
